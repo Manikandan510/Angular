@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <span>Todo Application</span>
+</mat-toolbar>
+<mat-toolbar>
+    <span>Create an ToDo item.</span>
+    <span class="nav-spacer"></span>
+    <button mat-raised-button color="primary" (click)="openDialog()">Add an item</button>
+    <button mat-mini-fab color="primary" class="refreshbtn" aria-label="Example icon button with a menu icon" (click)="refreshbtn()">
+        <mat-icon>refresh</mat-icon>
+    </button>
+</mat-toolbar>
+<app-to-do-list></app-to-do-list>

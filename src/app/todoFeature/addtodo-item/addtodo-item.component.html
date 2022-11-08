@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Add an item to the list</h1>
+<form [formGroup]="Addform">
+    <div mat-dialog-content>
+        <mat-form-field appearance="outline">
+            <mat-label>Item Name</mat-label>
+            <input matInput formControlName="itemName" placeholder="Add an item">
+        </mat-form-field>
+        <br/>
+        <input type="datetime-local" formControlName="duebyDate" [value]="date"/>
+        <div mat-dialog-content>
+            <mat-hint>Default date : {{date}}</mat-hint>
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button mat-dialog-close color="warm">Cancel</button>
+        <button mat-raised-button [mat-dialog-close]="Addform.value" [disabled]="!Addform.valid" color="primary" (click)="Additem()">Add</button>
+    </div>
+</form>
+
